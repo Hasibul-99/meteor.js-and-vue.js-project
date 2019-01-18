@@ -1,0 +1,101 @@
+.slider {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: 100vh;
+    ul {
+        list-style: none;
+        
+        &.slides{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            transition: top 800ms;
+            li {
+                height: 100%;
+                .img {
+                    height: 100%;
+                    background-size: cover;
+                    background-position: 50%;
+
+                }
+            }
+        }
+        &.indicators {
+            position: absolute;
+            padding-right: 40px;
+            right: 0;
+            top: 60%;
+            transform: translateY(-50%);
+            z-index: 2;
+            text-align: right;
+            li {
+                clear: both;
+                .item {
+                    position: relative;
+                    margin-bottom: 16px;
+                    float: right;
+                    
+                    &:last-child {
+                        .item {
+                            margin-bottom: 0
+                        }
+                    }
+                }
+                .title {
+                    color: #fff;
+                    cursor: pointer;
+                    font-size: 16px;
+                    font-family: 'SegoeUI-Bold';
+                    transition: font-size 0.6s ease-out;
+                }
+                .mark {
+                    color: #fff;
+                    font-family: 'SegoeUI-Semilight';
+
+                    // control bootatrap
+                    padding: 0;
+                    background-color: inherit;
+                }
+                .dot {
+                    position: absolute;
+                    top: 50%;
+                    right: -20px;
+                    margin-top: -5.5px;
+                    margin-left: 10px;
+                    width: 11px;
+                    height: 11px;
+                    background: #fff;
+                    border-radius: 50%;
+                }
+                .progress {
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                    height: 2px;
+                    margin: 8px 0;
+                    background: rgba(255, 255, 255, .5);
+                }
+
+                &.active {
+                    .title {
+                        transition: font-size 0.6s ease-in;
+                        font-size: 30px;
+                        font-family: 'SegoeUI-Light';
+                        .progress {
+                            .fill {
+                                height: 100%;
+                                background: #fff;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+  

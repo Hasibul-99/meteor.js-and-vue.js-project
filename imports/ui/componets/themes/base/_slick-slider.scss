@@ -1,0 +1,16 @@
+.slick-list {
+    z-index: -1;
+}
+.slick-prev {
+    left: 0;
+}
+.slick-next {
+    right: 0px;
+}
+.slick-prev:before, .slick-next:before {
+    color: $indigo_light_1;
+
+    &:hover {
+        color: $indigo_dark_3;
+    }
+}

@@ -12,6 +12,7 @@
     "animate.css": "^3.7.0",
     "bootstrap": "^4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
+    "lodash": "^4.17.11",
     "meteor-node-stubs": "^0.4.1",
     "vue": "^2.5.22",
     "vue-meteor-tracker": "^2.0.0-beta.5",

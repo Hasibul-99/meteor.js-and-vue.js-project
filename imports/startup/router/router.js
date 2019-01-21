@@ -22,6 +22,7 @@ import restaurentsDetail from '/imports/ui/componets/restaurent/restaurent-detai
 import restaurentsList from '/imports/ui/componets/restaurent/restaurent-list.vue';
 import contacts from '/imports/ui/componets/pages/contacts.vue';
 import gallery from '/imports/ui/componets/pages/gallery.vue';
+import register from '/imports/ui/componets/signIn/register.vue';
 
 RouterFactory.configure(factory => {
     // Simple routes
@@ -100,6 +101,11 @@ RouterFactory.configure(factory => {
             path: '/sign-in',
             name: 'sign_in',
             component: signIn,
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: register,
         }
     ])
   })

@@ -1,5 +1,5 @@
 <template>
-    <header class="header menu_fixed">
+    <header class="header menu_fixed" :class="{'sticky': scrolled}">
         <div class="logo">
             <router-link :to="{ name:'home' }" exact>
                 <img src="/img/logo.png" width="150" height="36" data-retina="true" alt="" class="logo_normal">
@@ -78,8 +78,24 @@
 
 <script>
     export default {
+        data: function() {
+            return {
+                scrolled: false
+            }
+        },
         components: {
     
+        },
+        methods: {
+            handleScroll() {
+             this.scrolled = window.scrollY
+            }
+        },
+        created() {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        destroyed() {
+            window.removeEventListener('scroll', this.handleScroll);
         }
     }
 </script>

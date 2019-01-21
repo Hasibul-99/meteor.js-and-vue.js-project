@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.5",
+    "animate.css": "^3.7.0",
     "bootstrap": "^4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
     "meteor-node-stubs": "^0.4.1",

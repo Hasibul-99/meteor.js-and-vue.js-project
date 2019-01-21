@@ -1,7 +1,3 @@
-body {
-    padding: 0;
-    font-family: Poppins,Helvetica,sans-serif;
-}
 .header-toolbar {
     .header-toolbar-icon {
         margin-top: 5px;
@@ -18,4 +14,22 @@ body {
     }
 }
 
+.sticky {
+    .header-toolbar {
+        .header-toolbar-icon {
+            color: $grey_dark_5;
+        }
+        .count {
+            bottom: 15px;
+            right: 90px;
+        }
+    }
+}
 
+.slider-item {
+    .box_grid {
+        .wish_bt::after {
+            content: "";
+        }
+    }
+}

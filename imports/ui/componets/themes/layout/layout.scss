@@ -2,7 +2,9 @@
 @import "../base/imageSlider";
 @import "../base/slick-slider";
 
-
-
+body {
+    padding: 0;
+    font-family: Poppins,Helvetica,sans-serif;
+}
 
 @import "../base/landing";

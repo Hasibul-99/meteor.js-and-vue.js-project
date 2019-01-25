@@ -23,6 +23,9 @@ import restaurentsList from '/imports/ui/componets/restaurent/restaurent-list.vu
 import contacts from '/imports/ui/componets/pages/contacts.vue';
 import gallery from '/imports/ui/componets/pages/gallery.vue';
 import register from '/imports/ui/componets/signIn/register.vue';
+import about from '/imports/ui/componets/pages/about.vue';
+import newsEvents from '/imports/ui/componets/news-events/news-events.vue';
+import newsEventsDetails from '/imports/ui/componets/news-events/news-events-details.vue';
 
 RouterFactory.configure(factory => {
     // Simple routes
@@ -106,6 +109,21 @@ RouterFactory.configure(factory => {
             path: '/register',
             name: 'register',
             component: register,
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: about,
+        },
+        {
+            path: '/news-&-events',
+            name: 'news_&_events',
+            component: newsEvents,
+        },
+        {
+            path: '/news-&-events-details',
+            name: 'news_&_events-details',
+            component: newsEventsDetails,
         }
     ])
   })

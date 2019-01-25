@@ -1,12 +1,12 @@
 <template>
   <div>
-    <template v-if="showHeader">
+    <template v-if="showHeader($route.name)">
       <Header></Header>
     </template>
     
     <router-view></router-view>
     
-    <template v-if="showFooter">
+    <template v-if="showFooter($route.name)">
 	    <footer-component></footer-component>
     </template>
   </div>
@@ -16,15 +16,22 @@
   import _ from 'lodash';
 
   import Header from '/imports/ui/componets/landing/header.vue';
-  import '/imports/ui/componets/themes/stylesheet/style.css';
-  import '/imports/ui/componets/themes/stylesheet/vendors.css';
   import footerComponent from '/imports/ui/componets/landing/footer.vue';
+  
   export default {
     data: function() {
       return {
-        showHeader: true,
-        showFooter: true,
-        hideHeaderPages: ['sign_in', 'register']
+        hideHeaderPages: ['sign_in', 'register'],
+        showHeader: function(pathName) {
+          if (_.indexOf(this.hideHeaderPages, pathName) !== -1 ) {
+              return false;
+          } else return true;
+        },
+        showFooter: function(pathName) {
+          if (_.indexOf(this.hideHeaderPages, pathName) !== -1 ) {
+              return false;
+          } else return true;
+        },
       }
     },
     components: {
@@ -36,17 +43,9 @@
         this.$nextTick(function () {
 
           // console.info('App this router:', instance.$router)
-          console.info('App currentRoute:', instance.$router.currentRoute)
-
-          let currentRouteInfo = instance.$router.currentRoute,
-              currentRouteName = currentRouteInfo && currentRouteInfo.name ? currentRouteInfo.name : '';
-
-          if (!currentRouteName || _.indexOf(instance.hideHeaderPages, currentRouteName) !== -1 ) {
-
-            console.log("instance.showHeader")
-            instance.showHeader = false;
-            instance.showFooter = false;
-          }
+          // console.info('App currentRoute:', instance.$router.currentRoute)
+          // console.log("path", instance.$route.path);
+          // console.log("name", instance.$route.name);
 
         })
     }

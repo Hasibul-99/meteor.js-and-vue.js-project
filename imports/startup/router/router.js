@@ -26,6 +26,8 @@ import register from '/imports/ui/componets/signIn/register.vue';
 import about from '/imports/ui/componets/pages/about.vue';
 import newsEvents from '/imports/ui/componets/news-events/news-events.vue';
 import newsEventsDetails from '/imports/ui/componets/news-events/news-events-details.vue';
+import notFoundPage from '/imports/ui/componets/pages/404.vue';
+import profile from '/imports/ui/componets/profile/index.vue';
 
 RouterFactory.configure(factory => {
     // Simple routes
@@ -124,6 +126,16 @@ RouterFactory.configure(factory => {
             path: '/news-&-events-details',
             name: 'news_&_events-details',
             component: newsEventsDetails,
+        },
+        {
+            path: '/profile',
+            name: 'profile',
+            component: profile,
+        },
+        {
+            path: '/*',
+            name: 'not-found-page',
+            component: notFoundPage,
         }
     ])
   })

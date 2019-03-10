@@ -96,7 +96,9 @@
 				<h2>Our founders</h2>
 				<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
 			</div>
-			<div id="carousel" class="owl-carousel owl-theme">
+
+			<carousel-3d></carousel-3d>
+			<!-- <div id="carousel" class="owl-carousel owl-theme">
 				<div class="item">
 					<a href="#0">
 						<div class="title">
@@ -132,10 +134,31 @@
 						</div><img src="img/5_carousel.jpg" alt="">
 					</a>
 				</div>
-			</div>
+			</div> -->
 			<!-- /carousel -->
 		</div>
 		<!--/container-->
 	</main>
 	<!--/main-->
 </template>
+
+<script>
+  import carousel3d from '/imports/ui/componets/pages/vue-carousel-3d.vue';
+  
+  export default {
+    data: function() {
+      return {
+        
+      }
+    },
+    components: {
+	  "carousel-3d": carousel3d
+    },
+    created: function () {
+        let instance = this;
+        this.$nextTick(function () {
+
+        })
+    }
+  }
+</script>

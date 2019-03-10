@@ -31,7 +31,7 @@
           if (_.indexOf(this.hideHeaderPages, pathName) !== -1 ) {
               return false;
           } else return true;
-        },
+        }
       }
     },
     components: {
